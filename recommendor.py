@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-class MovieRecommender:
+class MovieRecommenderr:
     def __init__(self, data):
         self.data = data
         self.vectorizer = CountVectorizer(max_features=5000, stop_words='english')
