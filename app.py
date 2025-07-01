@@ -1,6 +1,6 @@
 import streamlit as st
 from preprocess import load_and_merged_data, preprocess_data
-from recommendor import MovieRecommenderr
+from recommendor import MovieRecommender
 
 # Load data once
 @st.cache_data
@@ -9,7 +9,7 @@ def setup():
     credit_path = 'tmdb_5000_credits.csv'
     raw = load_and_merged_data(movie_path, credit_path)
     processed = preprocess_data(raw)
-    model = MovieRecommenderr(processed)
+    model = MovieRecommender(processed)
     return model, processed
 
 model, processed_data = setup()
